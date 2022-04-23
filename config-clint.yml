@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: dev
+    
+---
+# spring
+spring:
+  # dev环境
+  profiles: dev
+  application:
+    name: springcloud-provider-dept
+
+
+# Eureka配置：配置服务注册中心地址
+eureka:
+  client:
+    service-url:
+      # 注册中心地址为7001
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+---
+# spring
+spring:
+  # test环境
+  profiles: test
+  application:
+    name: springcloud-provider-dept
+
+
+# Eureka配置：配置服务注册中心地址
+eureka:
+  client:
+    service-url:
+      # 注册中心地址为7001
+      defaultZone: http://eureka7001.com:7001/eureka/
